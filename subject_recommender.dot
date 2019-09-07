@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="age <= 15.5\ngini = 0.833\nsamples = 18\nvalue = [3, 3, 3, 3, 3, 3]\nclass = Economics", fillcolor="#ffffff"] ;
+1 [label="gender <= 0.5\ngini = 0.5\nsamples = 6\nvalue = [0, 0, 3, 0, 0, 3]\nclass = SST", fillcolor="#ffffff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 0, 3]\nclass = science", fillcolor="#e5399d"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0, 0, 0]\nclass = SST", fillcolor="#39e581"] ;
+1 -> 3 ;
+4 [label="gender <= 0.5\ngini = 0.75\nsamples = 12\nvalue = [3, 3, 0, 3, 3, 0]\nclass = Economics", fillcolor="#ffffff"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="age <= 20.5\ngini = 0.5\nsamples = 6\nvalue = [3, 0, 0, 3, 0, 0]\nclass = Economics", fillcolor="#ffffff"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 3\nvalue = [3, 0, 0, 0, 0, 0]\nclass = Economics", fillcolor="#e58139"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 3, 0, 0]\nclass = c++", fillcolor="#399de5"] ;
+5 -> 7 ;
+8 [label="age <= 21.0\ngini = 0.5\nsamples = 6\nvalue = [0, 3, 0, 0, 3, 0]\nclass = Maths", fillcolor="#ffffff"] ;
+4 -> 8 ;
+9 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3, 0, 0, 0, 0]\nclass = Maths", fillcolor="#9de539"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 3, 0]\nclass = python", fillcolor="#8139e5"] ;
+8 -> 10 ;
+}
